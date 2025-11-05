@@ -27,10 +27,10 @@ export default function LandingPage() {
             />
         </div>
 
-        <h1 className="text-[34px] font-semibold text-[#1F1F1F] leading-tight">
+        <h1 className="text-[24px] font-semibold text-[#1F1F1F] leading-tight">
           What is your gender?
         </h1>
-        <p className="text-[17px] text-text-gray mt-3">
+        <p className="text-[14px] text-text-gray mt-3">
           We will use this to personalize your plan
         </p>
 
