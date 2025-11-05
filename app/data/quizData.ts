@@ -33,7 +33,7 @@ export const quizQuestions: Question[] = [
             { id: 13, text: 'Control', icon: 'IconControl' },
             { id: 14, text: 'Money', icon: 'IconMoney' },
             { id: 15, text: 'Performance', icon: 'IconPerformance' },
-            { id: 16, text: 'Role model', icon: 'IconRoleModel' },
+            { id: 16, text: 'Role model', icon: 'IconRole' },
         ]
     },
     {
