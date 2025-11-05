@@ -58,9 +58,9 @@ export default function QuizPage() {
               />
             </div>
             
-            <div className="font-semibold text-text-gray">
+            <div className="font-bold ">
               {currentIndex + 1}
-              <span className="text-gray-400"> / {TOTAL_QUESTIONS}</span> 
+              <span className=" font-normal"> / {TOTAL_QUESTIONS}</span> 
             </div>
           </div>
           
