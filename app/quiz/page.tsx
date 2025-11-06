@@ -1,33 +1,33 @@
-'use client'; 
+'use client'
 
-import { useState } from 'react';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { useQuiz } from '../context/QuizContext';
-import { Question, quizQuestions, TOTAL_QUESTIONS } from '../data/quizData';
-import { QuizIcon } from '../components/QuizIcon';
+import { useState } from 'react'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { useQuiz } from '../context/QuizContext'
+import { Question, quizQuestions, TOTAL_QUESTIONS } from '../data/quizData'
+import { QuizIcon } from '../components/QuizIcon'
 import BackButton from '../../assets/icons/BackButton.svg'
 
 
 export default function QuizPage() {
-  const [currentIndex, setCurrentIndex] = useState(0); 
-  const { setAnswer, answers } = useQuiz();
-  const router = useRouter();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const { setAnswer, answers } = useQuiz()
+  const router = useRouter()
 
-  const currentQuestion: Question = quizQuestions[currentIndex];
-  const progressPercent = ((currentIndex + 1) / TOTAL_QUESTIONS) * 100; 
+  const currentQuestion: Question = quizQuestions[currentIndex]
+  const progressPercent = ((currentIndex + 1) / TOTAL_QUESTIONS) * 100
 
   const handleAnswerSelect = (questionId: number, optionId: number) => {
-    setAnswer({ questionId: questionId, selectedOptionId: optionId });
+    setAnswer({ questionId: questionId, selectedOptionId: optionId })
 
     setTimeout(() => {
       if (currentIndex + 1 < TOTAL_QUESTIONS) { 
-        setCurrentIndex(currentIndex + 1);
+        setCurrentIndex(currentIndex + 1)
       } else {
-        router.push('/checkout');
+        router.push('/checkout')
       }
-    }, 200);
-  };
+    }, 200)
+  }
   
   const getSelectedOptionId = (questionId: number) => {
     return answers.find(a => a.questionId === questionId)?.selectedOptionId;
@@ -80,21 +80,21 @@ export default function QuizPage() {
 
         <div className="flex flex-col gap-3 mt-8">
           {currentQuestion.options.map((option) => {
-            const isSelected = selectedOptionId === option.id;
-            let buttonClasses = 'flex items-center w-full p-4 rounded-xl border-2 transition-all duration-200 text-left';
+            const isSelected = selectedOptionId === option.id
+            let buttonClasses = 'flex items-center w-full p-4 rounded-xl border-2 transition-all duration-200 text-left'
 
             if (currentQuestion.variantType === 'colored' && option.colorClasses) {
               const colors = option.colorClasses;
               if (isSelected) {
-                buttonClasses += ` ${colors.selectedBg} ${colors.selectedBorder} text-white`;
+                buttonClasses += ` ${colors.selectedBg} ${colors.selectedBorder} text-white`
               } else {
-                buttonClasses += ` ${colors.bg} ${colors.border} ${colors.text}`;
+                buttonClasses += ` ${colors.bg} ${colors.border} ${colors.text}`
               }
             } else {
               if (isSelected) {
-                buttonClasses += ' bg-primary-purple border-primary-purple text-white';
+                buttonClasses += ' bg-primary-purple border-primary-purple text-white'
               } else {
-                buttonClasses += ' bg-white border-transparent hover:border-gray-300 text-text-gray';
+                buttonClasses += ' bg-white border-transparent hover:border-gray-300 text-text-gray'
               }
             }
 
@@ -107,10 +107,10 @@ export default function QuizPage() {
                 <QuizIcon iconName={option.icon} className="flex-shrink-0" />
                 <span className="font-semibold text-lg">{option.text}</span>
               </button>
-            );
+            )
           })}
         </div>
       </div>
     </main>
-  );
+  )
 }
