@@ -223,4 +223,35 @@ export const quizQuestions: Question[] = [
       },
     ],
   },
-];
+]
+
+export const summaryData = [
+  {
+    icon: 'IconDesire',
+    tag: 'VERY STRONG',
+    title: 'Desire to change',
+    progress: 92,
+    color: 'summary-green'
+  },
+  {
+    icon: 'IconCraving',
+    tag: 'TOO HIGH',
+    title: 'Craving',
+    progress: 84,
+    color: 'summary-red'
+  },
+  {
+    icon: 'IconBlock',
+    tag: 'TOO HIGH',
+    title: 'Mental Blocks',
+    process: 74,
+    color: 'summary-red'
+  },
+  {
+    icon: 'IconStress2',
+    tag: 'MODERATELY HIGH',
+    title: 'Stress',
+    progress: 52,
+    color: 'summary-yellow'
+  }
+]
