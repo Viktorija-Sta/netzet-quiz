@@ -1,9 +1,9 @@
 'use client'
 
 import Image from "next/image"
-import { CountDownTimer } from "../components/CountdownTimer"
-import { useQuiz } from "../context/QuizContext"
-import { summaryData } from "../data/quizData"
+import { useQuiz } from "../context/QuizContext";
+import { CountDownTimer } from "../components/CountdownTimer";
+import { summaryData } from "../data/quizData";
 
 
 export default function CheckoutPage() {
@@ -12,7 +12,6 @@ export default function CheckoutPage() {
     return (
         <main className="flex flex-col items-center min-h-screen bg-page-bg">
             
-           
             <div className="w-full max-w-[375px]">
                 
                 <div className="w-full bg-timer-yellow-bg py-3 flex justify-center px-5">
@@ -27,12 +26,12 @@ export default function CheckoutPage() {
 
                 <div className="w-full px-5 py-8">
                     
-                    <h1 className="text-[28px] font-bold text-text-gray text-center leading-tight">
+                    <h1 className="text-[28px] font-bold leading-tight mb-6 px-1 ">
                         Your personalized Alcohol-Free Plan is ready!
                     </h1>
 
-                    <div className="grid grid-cols-2 gap-4 mt-6">
-                        <div className="bg-white rounded-xl shadow-md p-4 flex items-center">
+                    <div className="flex flex-row items-center justify-between ">
+                        <div className="flex items-center w-[48%]">
                             <Image 
                                 src="/icons/Frame.svg" 
                                 alt="Drinking patterns" 
@@ -45,7 +44,8 @@ export default function CheckoutPage() {
                                 <span className="block font-semibold text-text-gray">Imbalanced</span>
                             </div>
                         </div>
-                        <div className="bg-white rounded-xl shadow-md p-4 flex items-center">
+                        <div className="w-px h-12 bg-summary-purple-border"></div>
+                        <div className="p-1 flex items-center">
                             <Image 
                                 src="/icons/Target.svg" 
                                 alt="Target" 
@@ -70,46 +70,55 @@ export default function CheckoutPage() {
                             priority
                         />
                     </div>
-
+ 
                     <div className="mt-8">
-                        <h2 className="text-xl font-bold text-text-gray text-center">
+                        <h2 className="text-xl font-bold text-center">
                             Your Personal Summary
                         </h2>
 
                         <div className="flex flex-col gap-3 mt-4 ">
                             {summaryData.map((item) => (
-                                <div key={item.title} className={`bg-white rounded-xl shadow-md p-4 border ${item.colorClasses.border}`}>
-                                    <div className="flex items-center justify-between">
-                                        <div className="flex items-center">
+                                <div key={item.title} className={`rounded-xl shadow-md p-4 border ${item.borderColor}`}>
+                                    
+                                    <div className="flex items-center w-full gap-2">
+                                        
+                                        <div className="flex-shrink-0">
                                             <Image 
                                                 src={item.iconSrc} 
                                                 alt={item.title} 
                                                 width={36} 
                                                 height={36} 
-                                                className="mr-3 flex-shrink-0" 
                                             />
-                                            <div>
-                                                <span className={`text-[10px] font-bold ${item.colorClasses.bg} ${item.colorClasses.tagText} px-2 py-0.5 rounded`}>
-                                                    {item.tag}
-                                                </span>
-                                                <span className="block text-base font-semibold text-text-gray mt-1">{item.title}</span>
+                                        </div>
+                                        
+                                        <div className="flex-1 ml-2">
+                                            <span className={`text-[10px] font-bold bg-${item.color} ${item.tagTextColor} px-2 py-0.5 rounded`}>
+                                                {item.tag}
+                                            </span>
+                                            <span className="block text-base font-semibold text-text-gray mt-1">{item.title}</span>
+                                        </div>
+                                        
+                                        <div className="w-16 flex-shrink-0">
+                                            <div className="w-full bg-summary-gray rounded-full h-1.5">
+                                                <div 
+                                                    className={`bg-${item.color} h-1.5 rounded-full`}
+                                                    style={{ width: `${item.progress}%` }}
+                                                />
                                             </div>
                                         </div>
-                                        <span className={`text-lg font-bold ${item.colorClasses.text}`}>{item.progress}%</span>
-                                    </div>
-                                
-                                    <div className="w-full bg-summary-gray rounded-full h-1.5 mt-3">
-                                        <div 
-                                            className={`${item.colorClasses.bg} h-1.5 rounded-full`}
-                                            style={{ width: `${item.progress}%` }}
-                                        />
+                                        
+                                        <div className="w-12 flex-shrink-0 text-right">
+                                            <span className={`text-lg font-bold text-${item.color}`}>{item.progress}%</span>
+                                        </div>
+
                                     </div>
                                 </div>
                             ))}
                         </div>
+
                     </div>
                 </div>
             </div>
         </main>
-    )
+    );
 }
