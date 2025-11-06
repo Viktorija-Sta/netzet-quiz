@@ -227,28 +227,28 @@ export const quizQuestions: Question[] = [
 
 export const summaryData = [
   {
-    icon: 'IconDesire',
+    iconSrc: '/icons/IconDesire.svg',
     tag: 'VERY STRONG',
     title: 'Desire to change',
     progress: 92,
     color: 'summary-green'
   },
   {
-    icon: 'IconCraving',
+    iconSrc: '/icons/IconCraving.svg',
     tag: 'TOO HIGH',
     title: 'Craving',
     progress: 84,
     color: 'summary-red'
   },
   {
-    icon: 'IconBlock',
+    iconSrc: '/icons/IconBlock.svg',
     tag: 'TOO HIGH',
     title: 'Mental Blocks',
-    process: 74,
+    progress: 74,
     color: 'summary-red'
   },
   {
-    icon: 'IconStress2',
+    iconSrc: '/icons/IconStress2.svg',
     tag: 'MODERATELY HIGH',
     title: 'Stress',
     progress: 52,

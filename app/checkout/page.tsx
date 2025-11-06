@@ -3,63 +3,117 @@
 import Image from "next/image"
 import { CountDownTimer } from "../components/CountdownTimer"
 import { useQuiz } from "../context/QuizContext"
-import { QuizIcon } from "../components/QuizIcon"
+import { summaryData } from "../data/quizData"
 
 export default function CheckoutPage() {
     const { gender } = useQuiz()
 
-    const features = [
-        'Personalized plan',
-        'Daily tips and guidance',
-        'Community support',
-        'Progress tracking',
-        'Mindfulness exercises',
-
-    ]
-
     return (
         <main className="flex flex-col items-center min-h-screen bg-page-bg">
-            <CountDownTimer />
-            <div className="w-full max-w-[375px] px-5 py-8">
-                <div className="w-full rounded-xl overflow-hidden shadow-lg">
-                    {gender === 'male' ? (
-                        <Image
-                        src="/male_before_after.png"
-                        alt="Male before and after"
-                        width={225}
-                        height={180}
-                        className="w-full"
-                        />
-                    ) : (
-                        <Image
-                        src="/female_before_after.png"
-                        alt="Female before and after"
-                        width={225}
-                        height={180}
-                        className="w-full"
-                        />
-                    )}
-                </div>
-                <div className="mt-8">
-                    <h1 className="text-3xl font-bold text-text-grey text-center">
-                        Based pn tour answers
-                    </h1>
-                    <p className="tet-lg text-text-gray text-center mt-2">
-                        Here&apos;s what you get:
-                    </p>
-                    <div className="flex flex-col gap-4 mt-6">
-                        {features.map((feature) => (
-                            <div key={feature} className="flex items-center">
-                                <QuizIcon iconName="IconCheck" className="text-primary-purple mr-3" />
-                                <span className="text-lg text-text-gray">{feature}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <button 
-                    className="w-full bg-primary-purple text-white text-lg font-bold py-4 rounded-xl mt-8 shadow-lg
-                     hover:bg-opacity-90 transition-all"></button>
+            <div className="w-full max-w-[375px] bg-timer-yellow-bg py-3 flex justify-center">
+        <div className="flex items-center w-full max-w-[375px] px-5 justify-between">
+          <Image src="/logo.png" alt="Mellow Flow" width={62} height={36} priority />
+          <span className="font-bold text-text-gray ">
+            Reserved price for:
+            <CountDownTimer /> 
+          </span>
+        </div>
+      </div>
+
+
+      <div className="w-full max-w-[375px] px-5 py-8">
+        
+        <h1 className="text-[28px] font-bold text-text-gray  leading-tight">
+          Your personalized Alcohol-Free Plan is ready!
+        </h1>
+
+     
+        <div className="grid grid-cols-2 gap-4 mt-6">
+          <div className=" p-4 flex items-center">
+        
+            <Image 
+              src="/icons/Frame.svg" 
+              alt="Drinking patterns" 
+              width={36} 
+              height={36} 
+              className="mr-3 flex-shrink-0" 
+            />
+            <div>
+              <span className="text-xs text-gray-500">Drinking patterns</span>
+              <span className="block font-semibold text-text-gray">Imbalanced</span>
             </div>
-        </main>
-    )
+          </div>
+          <div className=" p-4 flex items-center">
+            
+            <Image 
+              src="/icons/Target.svg" 
+              alt="Target" 
+              width={36} 
+              height={36} 
+              className="mr-3 flex-shrink-0" 
+            />
+            <div>
+              <span className="text-xs text-gray-500">Goal</span>
+              <span className="block font-semibold text-text-gray">Regain control</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full rounded-xl overflow-hidden shadow-lg mt-6">
+          <Image
+            src={gender === 'Male' ? "/male_before_after.png" : "/female_before_after.png"}
+            alt={`${gender} before and after`}
+            width={335}
+            height={250}
+            className="w-full object-cover"
+            priority
+          />
+        </div>
+
+ 
+        <div className="mt-8">
+          <h2 className="text-xl font-bold text-text-gray text-center">
+            Your Personal Summary
+          </h2>
+
+          <div className="flex flex-col gap-3 mt-4">
+            {summaryData.map((item) => (
+              <div key={item.title} className="bg-white rounded-xl shadow-md p-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                  
+                    <Image 
+                      src={item.iconSrc} 
+                      alt={item.title} 
+                      width={36} 
+                      height={36} 
+                      className="mr-3 flex-shrink-0" 
+                    />
+                    <div>
+                  
+                      <span className={`text-[10px] font-bold text-${item.color}`}>
+                        {item.tag}
+                      </span>
+                      <span className="block text-base font-semibold text-text-gray">{item.title}</span>
+                    </div>
+                  </div>
+               
+                  <span className={`text-lg font-bold text-${item.color}`}>{item.progress}%</span>
+                </div>
+                
+            
+                <div className="w-full bg-summary-gray rounded-full h-1.5 mt-3">
+                  <div 
+                    className={`bg-${item.color} h-1.5 rounded-full`}
+                    style={{ width: `${item.progress}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </main>
+  )
 }

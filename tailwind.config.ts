@@ -18,6 +18,11 @@ const config: Config = {
         'quiz-yellow-border': '#F5BF23',
         'quiz-red-border': '#F05252',
         'timer-yellow-bg': '#FFC633',
+        'summary-green': '#30D18D',
+        'summary-red': '#F05252',
+        'summary-yellow': '#F5BF23',
+        'summary-blue': '#5349DB',
+        'summary-gray': '#E5E7EB'
       },
     },
   },

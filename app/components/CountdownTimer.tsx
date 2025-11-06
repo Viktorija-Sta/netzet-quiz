@@ -7,12 +7,7 @@ export const CountDownTimer = () => {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setSecondsLeft((prev) => {
-                if (prev === 0) {
-                    return 900
-                }
-                return prev -1
-            })
+            setSecondsLeft((prev) => (prev === 0 ? 900 : prev -1))
         }, 1000)
         return () => clearInterval(intervalId)
     }, [])
@@ -23,10 +18,10 @@ export const CountDownTimer = () => {
     const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
 
     return (
-        <div className="w-full bg-timer-yellow-bg p-3 flex items-center justify-center text-center">
-            <span className="font-semibold text-text-grey text-sm">
-                Special offer ends in: {formattedTime}
+        
+            <span className="text-lg font-bold ml-1">
+                {formattedTime}
             </span>
-        </div>
+       
     )
 }
