@@ -231,27 +231,39 @@ export const summaryData = [
     tag: 'VERY STRONG',
     title: 'Desire to change',
     progress: 92,
-    color: 'summary-green'
+    colorClasses: {
+      text: 'text-summary-green', 
+      bg: 'summary-green',       
+    },
   },
   {
     iconSrc: '/icons/IconCraving.svg',
     tag: 'TOO HIGH',
     title: 'Craving',
     progress: 84,
-    color: 'summary-red'
+    colorClasses: {
+      text: 'text-summary-red',
+      bg: 'summary-red',
+    },
   },
   {
     iconSrc: '/icons/IconBlock.svg',
     tag: 'TOO HIGH',
     title: 'Mental Blocks',
     progress: 74,
-    color: 'summary-red'
+    colorClasses: {
+      text: 'text-summary-red',
+      bg: 'summary-red',
+    },
   },
   {
     iconSrc: '/icons/IconStress2.svg',
     tag: 'MODERATELY HIGH',
     title: 'Stress',
     progress: 52,
-    color: 'summary-yellow'
+    colorClasses: {
+      text: 'text-summary-yellow',
+      bg: 'summary-yellow',
+    },
   }
 ]
