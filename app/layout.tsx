@@ -1,8 +1,13 @@
 import { QuizProvider } from "./context/QuizContext";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Figtree } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const figtree = Figtree({
+  subsets: ['latin'], 
+  display: 'swap',
+  variable: '--font-figtree', 
+  weight: ['400', '600', '700', '800'], 
+});
 
 export default function RootLayout({
   children,
@@ -11,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${figtree.variable} font-sans`}>
         <QuizProvider> 
           {children}
         </QuizProvider>

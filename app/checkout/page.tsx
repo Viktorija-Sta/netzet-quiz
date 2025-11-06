@@ -26,59 +26,59 @@ export default function CheckoutPage() {
 
                 <div className="w-full px-5 py-8">
                     
-                    <h1 className="text-[28px] font-bold leading-tight mb-6 px-1 ">
+                    <h1 className="text-[24px] font-bold leading-tight mb-6  ">
                         Your personalized Alcohol-Free Plan is ready!
                     </h1>
 
                     <div className="flex flex-row items-center justify-between ">
-                        <div className="flex items-center w-[48%]">
+                         <div className="p-1 flex items-center">
                             <Image 
                                 src="/icons/Frame.svg" 
                                 alt="Drinking patterns" 
-                                width={36} 
-                                height={36} 
+                                width={32} 
+                                height={32} 
                                 className="mr-3 flex-shrink-0" 
                             />
                             <div>
-                                <span className="text-xs text-gray-500">Drinking patterns</span>
-                                <span className="block font-semibold text-text-gray">Imbalanced</span>
+                                <span className="text-xs text-gray">Drinking patterns</span>
+                                <span className="block font-bold ">Imbalanced</span>
                             </div>
                         </div>
-                        <div className="w-px h-12 bg-summary-purple-border"></div>
+                        <div className="w-px m-3 h-12 bg-summary-purple-border"></div>
                         <div className="p-1 flex items-center">
                             <Image 
                                 src="/icons/Target.svg" 
                                 alt="Target" 
-                                width={36} 
-                                height={36} 
+                                width={32} 
+                                height={32} 
                                 className="mr-3 flex-shrink-0" 
                             />
                             <div>
-                                <span className="text-xs text-gray-500">Goal</span>
-                                <span className="block font-semibold text-text-gray">Regain control</span>
+                                <span className="text-xs text-gray">Goal</span>
+                                <span className="block font-bold ">Regain control and live alcohol-free</span>
                             </div>
                         </div>
                     </div>
 
-                    <div className="w-full rounded-xl overflow-hidden shadow-lg mt-6">
+                    <div className="w-full rounded-xl overflow-hidden mt-6">
                         <Image
                             src={gender === 'Male' ? "/male_before_after.png" : "/female_before_after.png"}
                             alt={`${gender} before and after`}
                             width={335}
-                            height={250}
+                            height={240}
                             className="w-full object-cover"
                             priority
                         />
                     </div>
  
                     <div className="mt-8">
-                        <h2 className="text-xl font-bold text-center">
+                        <h2 className="text-xl font-bold font-weight-700">
                             Your Personal Summary
                         </h2>
 
                         <div className="flex flex-col gap-3 mt-4 ">
                             {summaryData.map((item) => (
-                                <div key={item.title} className={`rounded-xl shadow-md p-4 border ${item.borderColor}`}>
+                                <div key={item.title} className={`rounded-xl p-3 border ${item.borderColor}`}>
                                     
                                     <div className="flex items-center w-full gap-2">
                                         
@@ -95,7 +95,7 @@ export default function CheckoutPage() {
                                             <span className={`text-[10px] font-bold bg-${item.color} ${item.tagTextColor} px-2 py-0.5 rounded`}>
                                                 {item.tag}
                                             </span>
-                                            <span className="block text-base font-semibold text-text-gray mt-1">{item.title}</span>
+                                            <span className="block text-base font-bold text-text-gray mt-1">{item.title}</span>
                                         </div>
                                         
                                         <div className="w-16 flex-shrink-0">

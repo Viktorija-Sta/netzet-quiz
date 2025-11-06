@@ -19,6 +19,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-figtree)', 'ui-sans-serif', 'system-ui'],
+      },
       colors: {
         'primary-purple': '#5349DB',
         'light-purple-bg': '#F0EFFB',
