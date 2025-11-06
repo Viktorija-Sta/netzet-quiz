@@ -53,7 +53,7 @@ export default function QuizPage() {
               <Image
                 src="/logo.png"
                 alt="Mellow Flow Logo"
-                width={62}
+                width={60}
                 height={36}
               />
             </div>
@@ -73,7 +73,7 @@ export default function QuizPage() {
         </header>
 
         <div className="mt-8">
-          <h1 className="text-[28px] font-bold text-[#1F1F1F] text-center leading-tight">
+          <h1 className="text-[24px] font-semibold text-[#303030 text-center leading-tight">
             {currentQuestion.questionText}
           </h1>
         </div>
