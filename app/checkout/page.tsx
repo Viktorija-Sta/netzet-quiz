@@ -76,9 +76,9 @@ export default function CheckoutPage() {
                             Your Personal Summary
                         </h2>
 
-                        <div className="flex flex-col gap-3 mt-4">
+                        <div className="flex flex-col gap-3 mt-4 ">
                             {summaryData.map((item) => (
-                                <div key={item.title} className="bg-white rounded-xl shadow-md p-4">
+                                <div key={item.title} className={`bg-white rounded-xl shadow-md p-4 border ${item.colorClasses.border}`}>
                                     <div className="flex items-center justify-between">
                                         <div className="flex items-center">
                                             <Image 
@@ -89,10 +89,10 @@ export default function CheckoutPage() {
                                                 className="mr-3 flex-shrink-0" 
                                             />
                                             <div>
-                                                <span className={`text-[10px] font-bold ${item.colorClasses.text}`}>
+                                                <span className={`text-[10px] font-bold ${item.colorClasses.bg} ${item.colorClasses.tagText} px-2 py-0.5 rounded`}>
                                                     {item.tag}
                                                 </span>
-                                                <span className="block text-base font-semibold text-text-gray">{item.title}</span>
+                                                <span className="block text-base font-semibold text-text-gray mt-1">{item.title}</span>
                                             </div>
                                         </div>
                                         <span className={`text-lg font-bold ${item.colorClasses.text}`}>{item.progress}%</span>
@@ -111,5 +111,5 @@ export default function CheckoutPage() {
                 </div>
             </div>
         </main>
-    );
+    )
 }

@@ -233,7 +233,9 @@ export const summaryData = [
     progress: 92,
     colorClasses: {
       text: 'text-summary-green', 
-      bg: 'summary-green',       
+      bg: 'bg-summary-green',   
+      tagText: 'text-white',
+      border: 'border-summary-purple-',    
     },
   },
   {
@@ -243,7 +245,9 @@ export const summaryData = [
     progress: 84,
     colorClasses: {
       text: 'text-summary-red',
-      bg: 'summary-red',
+      bg: 'bg-summary-red',
+      tagText: 'text-white',
+      border: 'border-summary-purple',
     },
   },
   {
@@ -253,7 +257,9 @@ export const summaryData = [
     progress: 74,
     colorClasses: {
       text: 'text-summary-red',
-      bg: 'summary-red',
+      bg: 'bg-summary-red',
+      tagText: 'text-white',
+      border: 'border-summary-purple',
     },
   },
   {
@@ -263,7 +269,9 @@ export const summaryData = [
     progress: 52,
     colorClasses: {
       text: 'text-summary-yellow',
-      bg: 'summary-yellow',
+      bg: 'bg-summary-yellow',
+      tagText: 'text-white',
+      border: 'border-summary-purple',
     },
   }
 ]

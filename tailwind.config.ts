@@ -1,4 +1,3 @@
-// tailwind.config.ts
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -22,7 +21,8 @@ const config: Config = {
         'summary-red': '#F05252',
         'summary-yellow': '#F5BF23',
         'summary-blue': '#5349DB',
-        'summary-gray': '#E5E7EB'
+        'summary-gray': '#E5E7EB',
+        'summary-purple-border': '#767AF9'
       },
     },
   },
