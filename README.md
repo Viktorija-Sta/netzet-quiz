@@ -36,12 +36,12 @@ Projektą galite peržiūrėti čia:
 
 ## 🔧 Naudotos Technologijos
 
-✅ **React 18** + **TypeScript**
-✅ **Next.js** (su App Router)
-✅ **Tailwind CSS** (Naudojant `safelist` ir arbitralias reikšmes `[]` dinaminėms klasėms ir "pixel-perfect" dizainui)
-✅ **React Context API** (Globaliai būsenai valdyti)
-✅ **`next/font`** (`Figtree` šrifto optimizavimui)
-✅ **SVGR** (`@svgr/webpack`) (SVG piktogramų importavimui kaip React komponentų, kad būtų galima dinamiškai keisti jų spalvą)
+* **React 18** + **TypeScript**  
+* **Next.js** (su App Router)  
+* **Tailwind CSS**   
+* **React Context API** (Globaliai būsenai valdyti)  
+* **`next/font`** (`Figtree` šrifto optimizavimui)  
+* **SVGR** (`@svgr/webpack`) (SVG piktogramų importavimui kaip React komponentų, kad būtų galima dinamiškai keisti jų spalvą)  
 
 ---
 
