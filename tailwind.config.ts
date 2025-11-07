@@ -14,7 +14,7 @@ const config: Config = {
     'bg-summary-red',
     'bg-summary-yellow',
     'text-white',
-    'text-text-grey',
+    'text-text-gray',
     'text-summary-purple',
     'border-summary-purple-border',
     'bg-quiz-green-border',

@@ -59,9 +59,9 @@ export default function QuizPage() {
               />
             </div>
             
-            <div className="font-bold ">
+            <div className="font-bold text-text-gray">
               {currentIndex + 1}
-              <span className=" font-normal"> / {TOTAL_QUESTIONS}</span> 
+              <span className=" font-normal text-text-gray"> / {TOTAL_QUESTIONS}</span> 
             </div>
           </div>
           
@@ -100,8 +100,8 @@ export default function QuizPage() {
                 buttonClasses += ' bg-primary-purple border-primary-purple'
                 textAndIconClasses += ' text-white'
               } else {
-                buttonClasses += ' bg-white border-transparent text-black hover:bg-primary-purple hover:border-primary-purple'
-                textAndIconClasses += ' text-black group-hover:text-white'
+                buttonClasses += ' bg-white border-transparent text-text-gray hover:bg-primary-purple hover:border-primary-purple'
+                textAndIconClasses += ' text-text-gray group-hover:text-white'
               }
             }
 
@@ -116,7 +116,7 @@ export default function QuizPage() {
                   className={`flex-shrink-0 ${textAndIconClasses}`}
                 />
                 <span 
-                  className={`font-semibold text-lg ${textAndIconClasses}`}
+                  className={`font-semibold text-[16px] ${textAndIconClasses}`}
                 >
                   {option.text}
                 </span>

@@ -49,7 +49,7 @@ export default function CheckoutPage() {
                                     className="flex-shrink-0" 
                                 />
                                 <div>
-                                    <span className="text-[10px] text-text-grey">Drinking patterns</span>
+                                    <span className="text-[10px] text-text-gray">Drinking patterns</span>
                                     <span className="block font-bold text-text-gray text-[12px]">Imbalanced</span>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@ export default function CheckoutPage() {
                                     className="flex-shrink-0" 
                                 />
                                 <div>
-                                    <span className="text-[10px] text-text-grey">Goal</span>
+                                    <span className="text-[10px] text-text-gray">Goal</span>
                                     <span className="block font-bold text-text-gray text-[12px]">Regain control and live alcohol-free</span>
                                 </div>
                             </div>
@@ -119,7 +119,7 @@ export default function CheckoutPage() {
                                         </div>
                                         
                                         <div className="w-12 flex-shrink-0 text-right">
-                                            <span className=" font-bold text-[14px]">{item.progress}%</span>
+                                            <span className=" font-bold text-text-gray text-[14px]">{item.progress}%</span>
                                         </div>
 
                                     </div>
