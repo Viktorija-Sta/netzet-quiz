@@ -17,7 +17,7 @@ export default function LandingPage() {
     <main className="flex flex-col items-center min-h-screen bg-page-bg">
     
       <div className="w-full max-w-[375px] px-5">
-        <div className="mt-12 mb-8 flex justify-center">
+        <div className="mt-6 mb-8 flex justify-center">
             <Image
                 src="/logo.png" 
                 alt="Mellow Flow Logo"
