@@ -246,7 +246,7 @@ export const summaryData = [
   {
     iconSrc: '/icons/IconCraving.svg',
     tag: 'TOO HIGH',
-    title: 'Craving',
+    title: 'Cravings',
     progress: 84,
     color: 'summary-red', 
     tagTextColor: 'text-white',

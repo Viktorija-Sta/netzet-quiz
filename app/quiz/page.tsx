@@ -83,8 +83,8 @@ export default function QuizPage() {
           {currentQuestion.options.map((option) => {
             const isSelected = selectedOptionId === option.id
             
-            let buttonClasses = 'group flex items-center w-full py-3 px-5 gap-4 rounded-xl border-2 transition-all duration-200 text-left'
-            let textAndIconClasses = 'transition-colors' 
+           let buttonClasses = 'group flex items-center w-full py-4 px-5 gap-4 rounded-xl border-2 transition-all duration-200 text-left'
+           let textAndIconClasses = 'transition-colors' 
 
             if (currentQuestion.variantType === 'colored' && option.colorClasses) {
               const colors = option.colorClasses;

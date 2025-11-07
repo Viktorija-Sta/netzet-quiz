@@ -48,8 +48,8 @@ export default function CheckoutPage() {
                                     height={32} 
                                     className="flex-shrink-0" 
                                 />
-                                <div>
-                                    <span className="text-[10px] text-text-gray">Drinking patterns</span>
+                                <div className="flex flex-col flex-wrap ">
+                                    <span className="text-[10px] text-text-gray ">Drinking patterns</span>
                                     <span className="block font-bold text-text-gray text-[12px]">Imbalanced</span>
                                 </div>
                             </div>
