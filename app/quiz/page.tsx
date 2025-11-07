@@ -74,7 +74,7 @@ export default function QuizPage() {
         </header>
 
         <div className="mt-8 ">
-          <h1 className="text-[24px] font-semibold text-[#303030] text-center leading-tight">
+          <h1 className="text-[24px] font-semibold text-text-gray text-center leading-tight">
             {currentQuestion.questionText}
           </h1>
         </div>
@@ -97,10 +97,10 @@ export default function QuizPage() {
               }
             } else {
               if (isSelected) {
-                buttonClasses += ' bg-primary-purple border-primary-purple'
+                buttonClasses += ' bg-quiz-purple-border border-quiz-purple-border'
                 textAndIconClasses += ' text-white'
               } else {
-                buttonClasses += ' bg-white border-transparent text-text-gray hover:bg-primary-purple hover:border-primary-purple'
+                buttonClasses += ' bg-white border-transparent text-text-gray hover:bg-quiz-purple-border hover:border-quiz-purple-border'
                 textAndIconClasses += ' text-text-gray group-hover:text-white'
               }
             }

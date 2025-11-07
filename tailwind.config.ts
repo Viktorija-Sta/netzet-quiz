@@ -7,33 +7,35 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}', 
   ],
   safelist: [
-    'text-summary-green',
-    'text-summary-red',
-    'text-summary-yellow',
+    'text-white',
+    'text-text-gray',
+
+    'text-quiz-green-border',
+    'text-quiz-red-border',
+    'text-quiz-yellow-border',
+    
+    'bg-quiz-green-border',
+    'bg-quiz-red-border',
+    'bg-quiz-yellow-border',
+
+    'hover:bg-quiz-green-border',
+    'hover:bg-quiz-yellow-border',
+    'hover:bg-quiz-red-border',
+    
+    
+    'hover:border-quiz-green-border',
+    'hover:border-quiz-yellow-border',
+    'hover:border-quiz-red-border',
+    
+    'border-summary-purple-border',
+
     'bg-summary-green',
     'bg-summary-red',
     'bg-summary-yellow',
-    'text-white',
-    'text-text-gray',
+    
     'text-summary-purple',
-    'border-summary-purple-border',
-    'bg-quiz-green-border',
-    'border-quiz-green-border',
-    'text-quiz-green-border',
-    'hover:bg-quiz-green-border',
-    'hover:border-quiz-green-border',
 
-    'bg-quiz-yellow-border',
-    'border-quiz-yellow-border',
-    'text-quiz-yellow-border',
-    'hover:bg-quiz-yellow-border',
-    'hover:border-quiz-yellow-border',
-
-    'bg-quiz-red-border',
-    'border-quiz-red-border',
-    'text-quiz-red-border',
-    'hover:bg-quiz-red-border',
-    'hover:border-quiz-red-border'
+   
   ],
   theme: {
     extend: {
@@ -45,18 +47,20 @@ const config: Config = {
         'light-purple-bg': '#F0EFFB',
         'text-gray': '#303030',
         'page-bg': '#F9F6F4',
-        'quiz-green-border': '#30D18D',
-        'quiz-yellow-border': '#F5BF23',
-        'quiz-red-border': '#F05252',
-        'timer-yellow-bg': '#FFC633',
-        'summary-green': '#30D18D',
-        'summary-red': '#F05252',
-        'summary-yellow': '#F5BF23',
-        'summary-blue': '#5349DB',
-        'summary-gray': '#E5E7EB',
-        'summary-purple-border': '#767AF9',
-        'summary-purple': '#6A61F1',
 
+        'quiz-green-border': '#289F67',
+        'quiz-yellow-border': '#FFC633',
+        'quiz-red-border': '#E35244',
+        'quiz-purple-border': '#767AF9',
+        
+        'timer-yellow-bg': '#FFC633',
+        'summary-purple-border': '#6A61F1',
+        'summary-red': '#E35244',
+        'summary-green': '#289F67',
+        'summary-yellow': '#FFC633',
+
+        'summary-gray': '#E5E7EB', 
+    
       },
     },
   },
