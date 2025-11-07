@@ -16,6 +16,23 @@ const config: Config = {
     'text-white',
     'text-text-gray',
     'border-summary-purple-border',
+    'bg-quiz-green-border',
+    'border-quiz-green-border',
+    'text-quiz-green-border',
+    'hover:bg-quiz-green-border',
+    'hover:border-quiz-green-border',
+
+    'bg-quiz-yellow-border',
+    'border-quiz-yellow-border',
+    'text-quiz-yellow-border',
+    'hover:bg-quiz-yellow-border',
+    'hover:border-quiz-yellow-border',
+
+    'bg-quiz-red-border',
+    'border-quiz-red-border',
+    'text-quiz-red-border',
+    'hover:bg-quiz-red-border',
+    'hover:border-quiz-red-border'
   ],
   theme: {
     extend: {

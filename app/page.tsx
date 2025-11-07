@@ -34,12 +34,12 @@ export default function LandingPage() {
           We will use this to personalize your plan
         </p>
 
-        <div className="flex flex-row gap-4 mt-10">
+        <div className="flex flex-row gap-3 mt-32">
           {['Male', 'Female'].map((gender) => (
             <button
               key={gender}
               onClick={() => genderSelectHandler(gender as 'Male' | 'Female')}
-              className="w-[155px] h-[234px] rounded-xl overflow-hidden border-2 border-transparent focus:border-primary-purple focus:ring-2 focus:ring-[#C4B5FD] hover:shadow-lg transition-all duration-300"
+              className="w-[155px] h-[234px] rounded-xl overflow-hidden border-2 border-primary-purple focus:border-primary-purple focus:ring-2 focus:ring-[#C4B5FD] hover:shadow-lg transition-all duration-300"
             >
               <div className="bg-light-purple-bg w-full flex justify-center h-[170px]">
                 <Image
@@ -50,7 +50,7 @@ export default function LandingPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="bg-primary-purple text-white text-[18px] font-semibold py-3 text-center h-[64px] flex items-center justify-center">
+              <div className="bg-primary-purple text-white text-[18px] font-semibold py-3 text-center h-[60px] flex items-center justify-center">
                 {gender}
               </div>
             </button>

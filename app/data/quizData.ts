@@ -19,6 +19,7 @@ export interface Question {
   questionText: string;
   variantType: 'default' | 'colored';
   options: AnswerOption[];
+  marginTop: string;
 }
 
 export const TOTAL_QUESTIONS = 6;
@@ -28,6 +29,7 @@ export const quizQuestions: Question[] = [
     id: 1,
     questionText: 'What is your main reason for wanting to quit drinking?',
     variantType: 'default',
+    marginTop: 'mt-[83px]',
     options: [
       { id: 11, text: 'Health', icon: 'IconHealth' },
       { id: 12, text: 'Relationships', icon: 'IconRelationships' },
@@ -41,6 +43,7 @@ export const quizQuestions: Question[] = [
     id: 2,
     questionText: 'What do you think is the main reason you drink?',
     variantType: 'default',
+    marginTop: 'mt-[84px]',
     options: [
       { id: 21, text: 'Stress or anxiety', icon: 'IconStress' },
       { id: 22, text: 'Socializing', icon: 'IconSocializing' },
@@ -54,6 +57,7 @@ export const quizQuestions: Question[] = [
     id: 3,
     questionText: 'Do you ever drink to feel "normal" or fit in with others?',
     variantType: 'colored',
+    marginTop: 'mt-[287px]',
     options: [
       {
         id: 31,
@@ -83,6 +87,7 @@ export const quizQuestions: Question[] = [
         id: 33,
         text: 'No',
         icon: 'IconNo',
+
         colorClasses: {
           bg: 'bg-white',
           border: 'border-quiz-red-border',
@@ -97,6 +102,7 @@ export const quizQuestions: Question[] = [
     id: 4,
     questionText: `Do you sometimes feel like you're missing out if you don't participate in group activities or social events?`,
     variantType: 'colored',
+       marginTop: 'mt-[231px]',
     options: [
       {
         id: 41,
@@ -140,6 +146,7 @@ export const quizQuestions: Question[] = [
     id: 5,
     questionText: 'Do you often find yourself wanting to escape from your daily responsibilities or pressures?',
     variantType: 'colored',
+       marginTop: 'mt-[231px]',
     options: [
       {
         id: 51,
@@ -183,6 +190,7 @@ export const quizQuestions: Question[] = [
     id: 6,
     questionText: 'Do you often seek ways to relax or unwind after a long, stressful day?',
     variantType: 'colored',
+    marginTop: 'mt-[259px]',
     options: [
       {
         id: 61,

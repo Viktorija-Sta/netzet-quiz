@@ -55,6 +55,7 @@ export default function QuizPage() {
                 alt="Mellow Flow Logo"
                 width={60}
                 height={36}
+                priority
               />
             </div>
             
@@ -72,29 +73,35 @@ export default function QuizPage() {
           </div>
         </header>
 
-        <div className="mt-8">
-          <h1 className="text-[24px] font-semibold text-[#303030 text-center leading-tight">
+        <div className="mt-8 ">
+          <h1 className="text-[24px] font-semibold text-[#303030] text-center leading-tight">
             {currentQuestion.questionText}
           </h1>
         </div>
 
-        <div className="flex flex-col gap-3 mt-8">
+        <div className={`flex flex-col gap-2 mb-4  ${currentQuestion.marginTop}`}>
           {currentQuestion.options.map((option) => {
             const isSelected = selectedOptionId === option.id
-            let buttonClasses = 'flex items-center w-full p-4 rounded-xl border-2 transition-all duration-200 text-left'
+            
+            let buttonClasses = 'group flex items-center w-full py-3 px-5 gap-4 rounded-xl border-2 transition-all duration-200 text-left'
+            let textAndIconClasses = 'transition-colors' 
 
             if (currentQuestion.variantType === 'colored' && option.colorClasses) {
               const colors = option.colorClasses;
               if (isSelected) {
-                buttonClasses += ` ${colors.selectedBg} ${colors.selectedBorder} text-white`
+                buttonClasses += ` ${colors.selectedBg} ${colors.selectedBorder}`
+                textAndIconClasses += ' text-white'
               } else {
-                buttonClasses += ` ${colors.bg} ${colors.border} ${colors.text}`
+                buttonClasses += ` ${colors.bg} ${colors.border} hover:${colors.selectedBg} hover:${colors.selectedBorder}`
+                textAndIconClasses += ` ${colors.text} group-hover:text-white`
               }
             } else {
               if (isSelected) {
-                buttonClasses += ' bg-primary-purple border-primary-purple text-white'
+                buttonClasses += ' bg-primary-purple border-primary-purple'
+                textAndIconClasses += ' text-white'
               } else {
-                buttonClasses += ' bg-white border-transparent hover:border-gray-300 text-text-gray'
+                buttonClasses += ' bg-white border-transparent text-black hover:bg-primary-purple hover:border-primary-purple'
+                textAndIconClasses += ' text-black group-hover:text-white'
               }
             }
 
@@ -104,8 +111,15 @@ export default function QuizPage() {
                 onClick={() => handleAnswerSelect(currentQuestion.id, option.id)}
                 className={buttonClasses}
               >
-                <QuizIcon iconName={option.icon} className="flex-shrink-0" />
-                <span className="font-semibold text-lg">{option.text}</span>
+                <QuizIcon 
+                  iconName={option.icon} 
+                  className={`flex-shrink-0 ${textAndIconClasses}`}
+                />
+                <span 
+                  className={`font-semibold text-lg ${textAndIconClasses}`}
+                >
+                  {option.text}
+                </span>
               </button>
             )
           })}
