@@ -17,11 +17,6 @@ export const CountdownTimer = () => {
 
     const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
 
-    return (
-        
-            <span className="text-lg font-bold text-summary-purple ml-1">
-                {formattedTime}
-            </span>
-       
-    )
+    return formattedTime
+    
 }
