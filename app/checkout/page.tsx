@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { useQuiz } from "../context/QuizContext";
-import { CountDownTimer } from "../components/CountdownTimer";
+import { CountdownTimer } from "../components/CountdownTimer";
 import { summaryData } from "../data/quizData";
 
 
@@ -16,10 +16,16 @@ export default function CheckoutPage() {
                 
                 <div className="w-full bg-timer-yellow-bg py-3 flex justify-center px-5">
                     <div className="flex items-center w-full justify-between">
-                        <Image src="/logo.png" alt="Mellow Flow" width={62} height={36} priority />
+                        <Image 
+                            src="/logo.png" 
+                            alt="Mellow Flow" 
+                            width={62} 
+                            height={36} 
+                            priority 
+                        />
                         <span className="font-semibold text-text-gray text-sm"> 
                             Reserved price for:
-                            <CountDownTimer /> 
+                            <CountdownTimer /> 
                         </span>
                     </div>
                 </div>

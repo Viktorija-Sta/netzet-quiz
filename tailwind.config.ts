@@ -14,7 +14,7 @@ const config: Config = {
     'bg-summary-red',
     'bg-summary-yellow',
     'text-white',
-    'text-text-gray',
+    'text-summary-purple',
     'border-summary-purple-border',
     'bg-quiz-green-border',
     'border-quiz-green-border',
@@ -43,6 +43,7 @@ const config: Config = {
         'primary-purple': '#5349DB',
         'light-purple-bg': '#F0EFFB',
         'text-gray': '#303030',
+        'text-summary-purple': '#6A61F1',
         'page-bg': '#F9F6F4',
         'quiz-green-border': '#30D18D',
         'quiz-yellow-border': '#F5BF23',
@@ -53,7 +54,8 @@ const config: Config = {
         'summary-yellow': '#F5BF23',
         'summary-blue': '#5349DB',
         'summary-gray': '#E5E7EB',
-        'summary-purple-border': '#767AF9'
+        'purple-border': '#767AF9'
+
       },
     },
   },

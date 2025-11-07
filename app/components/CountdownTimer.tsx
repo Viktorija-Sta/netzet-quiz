@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-export const CountDownTimer = () => {
+export const CountdownTimer = () => {
     const [secondsLeft, setSecondsLeft] = useState(900)
 
     useEffect(() => {
@@ -19,7 +19,7 @@ export const CountDownTimer = () => {
 
     return (
         
-            <span className="text-lg font-bold ml-1">
+            <span className="text-lg font-bold text-summary-purple ml-1">
                 {formattedTime}
             </span>
        
