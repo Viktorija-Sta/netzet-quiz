@@ -28,6 +28,7 @@ const config: Config = {
     'hover:border-quiz-red-border',
     
     'border-summary-purple-border',
+    'border-summary-purple',
 
     'bg-summary-green',
     'bg-summary-red',
@@ -55,6 +56,7 @@ const config: Config = {
         
         'timer-yellow-bg': '#FFC633',
         'summary-purple-border': '#6A61F1',
+        'summary-purple': '#6A61F1',
         'summary-red': '#E35244',
         'summary-green': '#289F67',
         'summary-yellow': '#FFC633',
