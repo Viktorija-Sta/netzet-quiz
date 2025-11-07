@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Praktinė Užduotis 
 
-## Getting Started
+---
 
-First, run the development server:
+## 🌐 Gyvai pasiekiama
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Projektą galite peržiūrėti čia:
+**[https://netzet-quiz-nrn71og21-viktorija-stas-projects.vercel.app/]** 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Paleidimas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  **Klonuokite šią repozitoriją**
 
-## Learn More
+    ```bash
+    git clone [https://github.com/Viktorija-Sta/netzet-quiz.git](https://github.com/Viktorija-Sta/netzet-quiz.git)
+    cd netzet-quiz
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2.  **Įdiekite priklausomybes:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3.  **Paleiskite aplikaciją:**
 
-## Deploy on Vercel
+    ```bash
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4.  Aplikacija bus pasiekiama adresu: **http://localhost:3000**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🔧 Naudotos Technologijos
+
+✅ **React 18** + **TypeScript**
+✅ **Next.js** (su App Router)
+✅ **Tailwind CSS** (Naudojant `safelist` ir arbitralias reikšmes `[]` dinaminėms klasėms ir "pixel-perfect" dizainui)
+✅ **React Context API** (Globaliai būsenai valdyti)
+✅ **`next/font`** (`Figtree` šrifto optimizavimui)
+✅ **SVGR** (`@svgr/webpack`) (SVG piktogramų importavimui kaip React komponentų, kad būtų galima dinamiškai keisti jų spalvą)
+
+---
+
+## 📝 Pastabos
+
+Projektas sukurtas siekiant užtikrinti švarų kodą, "pixel-perfect" dizaino atitikimą ir funkcionalumą.
+
+* **Komponentai** (`QuizIcon`, `CountdownTimer`) yra iškelti geresniam pakartotiniam naudojimui.
+* **Duomenys** (`quizData.ts`) yra atskirti nuo logikos, leidžiant lengvai keisti klausimus, atstumus ir spalvas.
+* **Tailwind CSS** konfigūracija papildyta `safelist`, kad būtų galima saugiai naudoti dinamines klases (`bg-${item.color}`).
+
+---
