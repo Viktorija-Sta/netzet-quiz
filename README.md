@@ -14,7 +14,7 @@ Projektą galite peržiūrėti čia:
 1.  **Klonuokite šią repozitoriją**
 
     ```bash
-    git clone [https://github.com/Viktorija-Sta/netzet-quiz.git](https://github.com/Viktorija-Sta/netzet-quiz.git)
+    git clone https://github.com/Viktorija-Sta/netzet-quiz.git
     cd netzet-quiz
     ```
 
