@@ -39,7 +39,7 @@ export default function LandingPage() {
             <button
               key={gender}
               onClick={() => genderSelectHandler(gender as 'Male' | 'Female')}
-              className="relative w-[155px] h-[234px] rounded-xl overflow-hidden border-2 border-primary-purple focus:border-primary-purple focus:ring-2 focus:ring-[#C4B5FD] hover:shadow-lg transition-all duration-300"
+              className="relative w-[162px] h-[200px] rounded-xl overflow-hidden border-2 border-primary-purple focus:border-primary-purple focus:ring-2 focus:ring-[#C4B5FD] hover:shadow-lg transition-all duration-300"
               >
               <div className="bg-light-purple-bg w-full flex justify-center h-full">
                 <Image
