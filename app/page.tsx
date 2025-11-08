@@ -47,7 +47,7 @@ export default function LandingPage() {
                   alt={gender}
                   width={160}
                   height={140}
-                  className="w-full h-full object-cover"
+                  className=" object-cover"
                 />
               </div>
               <div className="absolute bottom-0 left-0 w-full bg-primary-purple text-white text-[18px] font-semibold py-3 text-center h-[60px] flex items-center justify-center">

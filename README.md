@@ -5,7 +5,7 @@
 ## 🌐 Gyvai pasiekiama
 
 Projektą galite peržiūrėti čia:
-**[https://netzet-quiz-nrn71og21-viktorija-stas-projects.vercel.app/]** 
+**[https://netzet-quiz-6a0i1egqg-viktorija-stas-projects.vercel.app/]** 
 
 ---
 
